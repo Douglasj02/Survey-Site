@@ -5,7 +5,6 @@
   "projects": {
     "survey-link-site": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -16,15 +15,10 @@
             "outputPath": "dist/survey-link-site",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -46,27 +40,18 @@
                 }
               ],
               "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
               "optimization": true,
-              "extractLicenses": true,
               "sourceMap": false,
+              "extractLicenses": true,
               "namedChunks": false,
               "vendorChunk": true,
-              "commonChunk": true,
-              "serviceWorker": true
+              "commonChunk": true
             },
             "development": {
               "optimization": false,
-              "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
-              "vendorChunk": true,
-              "serviceWorker": false
+              "extractLicenses": false,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -82,36 +67,8 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

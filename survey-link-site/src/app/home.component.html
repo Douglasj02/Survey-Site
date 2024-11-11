@@ -1,15 +1,15 @@
-<div class="min-h-screen w-screen bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex flex-col overflow-hidden font-sans">
+<div class="min-h-screen w-screen bg-gradient-to-r from-[#003A70] to-[#BE1E2D] text-white flex flex-col overflow-hidden font-sans">
   
   <!-- Header Section -->
-  <header class="h-[15vh] flex items-center justify-center px-4 py-4 shadow-md bg-gray-900">
+  <header class="h-[15vh] flex items-center justify-center px-4 py-4 shadow-md bg-[#002750]">
     <div class="flex justify-center">
       <img 
         [ngSrc]="'assets/up-logo.png'" 
-        alt="University Logo" 
+        alt="University of Pretoria Logo" 
         [width]="394" 
         [height]="128" 
         priority
-        class="h-[12vh] w-auto object-contain rounded-lg shadow-lg animate-pulse"
+        class="h-[12vh] w-auto object-contain"
       >
     </div>
   </header>
@@ -19,12 +19,12 @@
     <div class="max-w-6xl mx-auto w-full space-y-8">
       
       <!-- Welcome Heading -->
-      <h1 class="text-4xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-pink-500">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#B4975A] to-white">
         Welcome to Our Survey
       </h1>
 
       <!-- Description Paragraph -->
-      <p class="text-lg text-gray-200 text-center">
+      <p class="text-lg text-white/90 text-center max-w-2xl mx-auto">
         We appreciate your participation in this survey to help us improve our services at the Groenkloof IT Labs.
       </p>
 
@@ -32,33 +32,33 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Feature Card 1 -->
-        <div class="bg-gray-800/60 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center">
-          <div class="text-teal-400 text-3xl mb-4">⏱️</div>
+        <div class="bg-[#003A70]/80 p-6 rounded-2xl hover:bg-[#003A70] transition-colors duration-300 flex flex-col items-center">
+          <div class="text-[#B4975A] text-3xl mb-4">⏱️</div>
           <h3 class="text-lg font-semibold mb-2">Quick & Easy</h3>
-          <p class="text-sm text-gray-300 text-center">Takes only a few minutes</p>
+          <p class="text-sm text-white/80 text-center">Takes only a few minutes</p>
         </div>
 
         <!-- Feature Card 2 -->
-        <div class="bg-gray-800/60 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center">
-          <div class="text-teal-400 text-3xl mb-4">🔒</div>
+        <div class="bg-[#003A70]/80 p-6 rounded-2xl hover:bg-[#003A70] transition-colors duration-300 flex flex-col items-center">
+          <div class="text-[#B4975A] text-3xl mb-4">🔒</div>
           <h3 class="text-lg font-semibold mb-2">Secure</h3>
-          <p class="text-sm text-gray-300 text-center">Your responses are confidential</p>
+          <p class="text-sm text-white/80 text-center">Your responses are confidential</p>
         </div>
 
         <!-- Feature Card 3 -->
-        <div class="bg-gray-800/60 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center">
-          <div class="text-teal-400 text-3xl mb-4">💡</div>
+        <div class="bg-[#003A70]/80 p-6 rounded-2xl hover:bg-[#003A70] transition-colors duration-300 flex flex-col items-center">
+          <div class="text-[#B4975A] text-3xl mb-4">💡</div>
           <h3 class="text-lg font-semibold mb-2">Impactful</h3>
-          <p class="text-sm text-gray-300 text-center">Help shape improvements at the labs</p>
+          <p class="text-sm text-white/80 text-center">Help shape improvements at the labs</p>
         </div>
       </div>
 
       <!-- Call-to-Action Button -->
-      <div class="flex justify-center">
+      <div class="flex justify-center mt-8">
         <a 
           [href]="surveyLink" 
           target="_blank"
-          class="inline-flex items-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-teal-500 to-pink-500 rounded-full hover:from-teal-400 hover:to-pink-400 transform hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-teal-400"
+          class="inline-flex items-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-[#BE1E2D] to-[#003A70] rounded-full hover:from-[#003A70] hover:to-[#BE1E2D] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#B4975A]"
         >
           Start Survey
           <svg 
@@ -78,12 +78,19 @@
           </svg>
         </a>
       </div>
+
+      <!-- Additional Information -->
+      <div class="text-center text-white/80 text-sm max-w-xl mx-auto">
+        <p>
+          Your feedback is valuable to us and will help improve the IT lab experience for all students.
+        </p>
+      </div>
     </div>
   </main>
 
   <!-- Footer Section -->
-  <footer class="h-[10vh] flex items-center justify-center bg-gray-900">
-    <div class="text-gray-400 text-sm">
+  <footer class="h-[10vh] flex items-center justify-center bg-[#002750]">
+    <div class="text-[#B4975A] text-sm">
       © {{currentYear}} University of Pretoria Survey. All rights reserved.
     </div>
   </footer>

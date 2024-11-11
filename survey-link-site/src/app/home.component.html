@@ -1,56 +1,91 @@
-<div class="h-screen w-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col overflow-hidden">
-  <header class="h-[15vh] flex items-center justify-center px-4">
+<div class="min-h-screen w-screen bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex flex-col overflow-hidden font-sans">
+  
+  <!-- Header Section -->
+  <header class="h-[15vh] flex items-center justify-center px-4 py-4 shadow-md bg-gray-900">
     <div class="flex justify-center">
-      <img [ngSrc]="'assets/up-logo.png'" alt="University" [width]="394" [height]="128" priority
-           class="h-[12vh] w-auto object-contain rounded-lg shadow-lg">
+      <img 
+        [ngSrc]="'assets/up-logo.png'" 
+        alt="University Logo" 
+        [width]="394" 
+        [height]="128" 
+        priority
+        class="h-[12vh] w-auto object-contain rounded-lg shadow-lg animate-pulse"
+      >
     </div>
   </header>
 
-  <main class="h-[75vh] px-4 flex flex-col justify-center">
-    <div class="max-w-6xl mx-auto w-full">
-      <h1 class="text-3xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 mb-4">
+  <!-- Main Content Area -->
+  <main class="flex-grow px-4 md:px-6 lg:px-8 py-8 flex flex-col justify-center">
+    <div class="max-w-6xl mx-auto w-full space-y-8">
+      
+      <!-- Welcome Heading -->
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-pink-500">
         Welcome to Our Survey
       </h1>
 
-      <p class="text-lg text-gray-300 text-center mb-6">
+      <!-- Description Paragraph -->
+      <p class="text-lg text-gray-200 text-center">
         We appreciate your participation in this survey to help us improve our services at the Groenkloof IT Labs.
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all duration-300">
-          <div class="text-blue-400 text-2xl mb-2">⏱️</div>
-          <h3 class="text-base font-semibold mb-1">Quick & Easy</h3>
-          <p class="text-sm text-gray-400">Takes only a few minutes</p>
+      <!-- Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Feature Card 1 -->
+        <div class="bg-gray-800/60 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center">
+          <div class="text-teal-400 text-3xl mb-4">⏱️</div>
+          <h3 class="text-lg font-semibold mb-2">Quick & Easy</h3>
+          <p class="text-sm text-gray-300 text-center">Takes only a few minutes</p>
         </div>
 
-        <div class="bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all duration-300">
-          <div class="text-blue-400 text-2xl mb-2">🔒</div>
-          <h3 class="text-base font-semibold mb-1">Secure</h3>
-          <p class="text-sm text-gray-400">Your responses are confidential</p>
+        <!-- Feature Card 2 -->
+        <div class="bg-gray-800/60 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center">
+          <div class="text-teal-400 text-3xl mb-4">🔒</div>
+          <h3 class="text-lg font-semibold mb-2">Secure</h3>
+          <p class="text-sm text-gray-300 text-center">Your responses are confidential</p>
         </div>
 
-        <div class="bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all duration-300">
-          <div class="text-blue-400 text-2xl mb-2">💡</div>
-          <h3 class="text-base font-semibold mb-1">Impactful</h3>
-          <p class="text-sm text-gray-400">Help shape improvements at the labs</p>
+        <!-- Feature Card 3 -->
+        <div class="bg-gray-800/60 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center">
+          <div class="text-teal-400 text-3xl mb-4">💡</div>
+          <h3 class="text-lg font-semibold mb-2">Impactful</h3>
+          <p class="text-sm text-gray-300 text-center">Help shape improvements at the labs</p>
         </div>
       </div>
 
+      <!-- Call-to-Action Button -->
       <div class="flex justify-center">
-        <a [href]="surveyLink" target="_blank"
-           class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-500 hover:to-purple-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+        <a 
+          [href]="surveyLink" 
+          target="_blank"
+          class="inline-flex items-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-teal-500 to-pink-500 rounded-full hover:from-teal-400 hover:to-pink-400 transform hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-teal-400"
+        >
           Start Survey
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6 ml-2" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M13 7l5 5m0 0l-5 5m5-5H6" 
+            />
           </svg>
         </a>
       </div>
     </div>
   </main>
 
-  <footer class="h-[10vh] flex items-center justify-center border-t border-gray-800">
+  <!-- Footer Section -->
+  <footer class="h-[10vh] flex items-center justify-center bg-gray-900">
     <div class="text-gray-400 text-sm">
       © {{currentYear}} University of Pretoria Survey. All rights reserved.
     </div>
   </footer>
+
 </div>
